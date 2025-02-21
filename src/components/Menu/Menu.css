@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color:#FFF8E8;
+    background-image: url(Back.jpg);
+    
+  }
+  
+  /* Menu container setup - take up 75% of the page width */
+  .menu-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 75%; /* Set to 75% of the page width */
+    padding: 20px;
+    margin: 0 auto; /* Center the container on the page */
+  }
+  
+  /* Style for each menu section */
+  .menu-section {
+    background-color: #bd9fd8;
+    border-radius: 8px;
+    width: 23%; /* Each section will take up roughly 23% of the container width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  .menu-section img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #ddd;
+  }
+  
+  .menu-section h2 {
+    font-family: "Sigmar", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #2d1b5d;
+    color: white;
+    padding: 15px;
+    margin: 0;
+    font-size: 24px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    box-shadow:0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .menu-section:hover{
+    transform:translateY(-10px);
+    box-shadow:0 8px 12px rgba(0,0,0,0.3);
+  }
+  
+  .menu-section ul {
+    list-style-type: none;
+    padding: 15px;
+    text-align: left;
+  }
+  
+  .menu-section ul li {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  
+  .menu-section ul li:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+  }
+  
+  /* Media Queries for Responsiveness */
+  
+  /* Tablets and below */
+  @media (max-width: 768px) {
+    .menu-container {
+      flex-direction: column;
+      align-items: center;
+      width: 90%; /* Take up 90% of the width on smaller screens */
+    }
+  
+    .menu-section {
+      width: 80%; /* Sections take up more space on smaller screens */
+      margin-bottom: 20px;
+    }
+  
+    .menu-section h2 {
+      font-size: 20px;
+    }
+  
+    .menu-section ul li {
+      font-size: 16px;
+    }
+  }
+  
+  /* Mobile devices (portrait) */
+  @media (max-width: 480px) {
+    .menu-container {
+      padding: 20px;
+      width: 100%; /* Full width on mobile devices */
+    }
+  
+    .menu-section {
+      width: 100%; /* Full width on very small screens */
+      margin-bottom: 15px;
+    }
+  
+    .menu-section h2 {
+      font-size: 18px;
+    }
+  
+    .menu-section ul li {
+      font-size: 14px;
+    }
+  }
+  .sigmar-regular {
+    font-family: "Sigmar", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  /* Container for the Discount Section */
+.discount-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  padding: 20px;
+  width: 75%; /* Limit the width like the menu */
+  margin: 40px auto; /* Center it on the page */
+}
+
+/* Individual discount boxes */
+.discount-box {
+  background-color: #2d1b5d;
+  color: white;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Title of the discount box */
+.discount-box h3 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+/* Description of the discount box */
+.discount-box p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Hover Effect */
+.discount-box:hover {
+  background-color:#bd9fd8;
+  cursor: pointer;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablets and below */
+@media (max-width: 768px) {
+  .discount-container {
+    width: 90%;
+  }
+
+  .discount-box {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .discount-box h3 {
+    font-size: 22px;
+  }
+
+  .discount-box p {
+    font-size: 16px;
+  }
+}
+
+/* Mobile devices (portrait) */
+@media (max-width: 480px) {
+  .discount-container {
+    width: 100%;
+  }
+
+  .discount-box {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .discount-box h3 {
+    font-size: 20px;
+  }
+
+  .discount-box p {
+    font-size: 14px;
+  }
+}

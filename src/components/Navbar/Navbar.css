@@ -1,0 +1,148 @@
+/* style.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at center, #0d0d0d, #000000 70%);
+    font-family: 'Orbitron', sans-serif;
+    overflow-x: hidden;
+  }
+  
+  .neon-navbar {
+    position: fixed;
+    top: 0;
+    height: 5rem;
+    width: 100%;
+    background: rgba(13, 13, 13, 0.9);
+    box-shadow: 0 0 20px rgba(0, 246, 255, 0.2);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    z-index: 100;
+  }
+  
+  .neon-navbar .logo {
+    color: #00f6ff;
+    font-size: 32px;
+    letter-spacing: 2px;
+  }
+  
+  .neon-navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+  }
+  
+  .neon-navbar li {
+    position: relative;
+    margin: 0 15px;
+  }
+  
+  .neon-navbar a {
+    color: #00f6ff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+  
+  .neon-navbar a:hover {
+    color: #fff;
+  }
+  
+  .neon-navbar li::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(0, 246, 255, 0.7), transparent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s;
+  }
+  
+  .neon-navbar li:hover::before {
+    transform: scaleX(1);
+  }
+  
+  .neon-navbar::after {
+    content: '';
+    position: absolute;
+    left: -50%;
+    top: 0;
+    width: 200%;
+    height: 100%;
+    background: repeating-linear-gradient(
+      45deg,
+      rgba(0, 246, 255, 0.05),
+      rgba(0, 246, 255, 0.05) 10px,
+      transparent 10px,
+      transparent 20px
+    );
+    animation: neon-bg 10s linear infinite;
+    pointer-events: none;
+  }
+  
+  @keyframes neon-bg {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 1000px 0;
+    }
+  }
+  
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .menu-toggle span {
+    width: 30px;
+    height: 4px;
+    background: #00f6ff;
+    margin: 5px 0;
+    transition: 0.4s;
+  }
+  
+  .menu-toggle.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .menu-toggle.open span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-toggle.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -8px);
+  }
+  
+  @media (max-width: 768px) {
+    .neon-navbar ul {
+      position: fixed;
+      top: 80px;
+      left: -100%;
+      background: rgba(13, 13, 13, 0.95);
+      height: 100%;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: left 0.3s;
+    }
+    
+    .neon-navbar ul.active {
+      left: 0;
+    }
+    
+    .menu-toggle {
+      display: flex;
+    }
+  }
