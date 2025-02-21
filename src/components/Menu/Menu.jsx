@@ -1,10 +1,10 @@
 import React from 'react';
 import "./Menu.css";
 import Sweets from "../../assets/Sweets.jpg";
-import Cross from "../../assets/Cross.jpg";
+
 import Drinks from "../../assets/Drinks.jpg";
 import Pizza from "../../assets/Pizza.jpg";
-import Vector from "../../assets/back.jpg"; // The background image
+import Vector from "../../assets/background.jpg"; // The background image
 
 const Menu = () => {
   // Background image styles
