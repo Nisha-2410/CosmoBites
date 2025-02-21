@@ -8,10 +8,10 @@ const Navbar = () => {
   <div className="logo">COSMObites</div>
   <ul>
     <li><a href="#">Home</a></li>
-    <li><a href="#">Arena</a></li>
-    <li><a href="#">Gladiators</a></li>
-    <li><a href="#">Battle</a></li>
+    <li><a href="#">About</a></li>
     <li><a href="#">Contact</a></li>
+    <li><a href="#">Order</a></li>
+    <li><a href="#">Images</a></li>
   </ul>
   <div className="menu-toggle">
     <span></span>

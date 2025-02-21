@@ -1,0 +1,43 @@
+body{
+    background-color: black;
+}
+img{
+    width:100vw;
+    height:100vh;
+    /* margin:50px; */
+}
+.box{
+    background-color: white;
+    width:300px;
+    height:300px;
+    margin: 15px;
+    border-radius: 10%;
+    text-align: center;
+    padding:20px;
+    font-family: Georgia, serif;
+    
+  /* border: 2px solid rgb(47, 46, 46); Initial border color */
+  transition: transform 0.3s ease, border-color 0.3s ease; /* Transition for transform and border */
+
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.container{
+    display:flex;
+
+  justify-content: center;      /* Centers children horizontally */
+  align-items:center;
+  position: relative; /* Necessary to allow positioning of boxes */
+  z-index: 1; /* Ensures the boxes appear above the image */
+  margin-top: -50px; 
+  top: -70px;
+}
+.image-container{
+    position:relative;
+    
+
+}
+.box:hover{
+    transform: translateY(-10px); /* Move the box up by 10px */
+    /* border-color: rgb(17, 17, 17); */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
